@@ -167,21 +167,25 @@
             this.txtDescricao.Multiline = true;
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(355, 85);
-            this.txtDescricao.TabIndex = 5;
+            this.txtDescricao.TabIndex = 4;
             // 
             // txtQuantidade
             // 
             this.txtQuantidade.Location = new System.Drawing.Point(10, 276);
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(169, 20);
-            this.txtQuantidade.TabIndex = 6;
+            this.txtQuantidade.TabIndex = 7;
+            this.txtQuantidade.Text = "0,00";
+            this.txtQuantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtQuantidade_KeyPress);
+            this.txtQuantidade.Leave += new System.EventHandler(this.txtQuantidade_Leave);
             // 
             // txtValorPago
             // 
             this.txtValorPago.Location = new System.Drawing.Point(10, 222);
             this.txtValorPago.Name = "txtValorPago";
             this.txtValorPago.Size = new System.Drawing.Size(169, 20);
-            this.txtValorPago.TabIndex = 7;
+            this.txtValorPago.TabIndex = 5;
+            this.txtValorPago.Text = "0,00";
             this.txtValorPago.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorPago_KeyPress);
             this.txtValorPago.Leave += new System.EventHandler(this.txtValorPago_Leave);
             // 
@@ -217,7 +221,9 @@
             this.txtValorVenda.Location = new System.Drawing.Point(185, 222);
             this.txtValorVenda.Name = "txtValorVenda";
             this.txtValorVenda.Size = new System.Drawing.Size(176, 20);
-            this.txtValorVenda.TabIndex = 11;
+            this.txtValorVenda.TabIndex = 6;
+            this.txtValorVenda.Text = "0,00";
+            this.txtValorVenda.TextChanged += new System.EventHandler(this.txtValorVenda_Leave);
             this.txtValorVenda.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtValorVenda_KeyPress);
             this.txtValorVenda.Leave += new System.EventHandler(this.txtValorVenda_Leave);
             // 
@@ -254,7 +260,7 @@
             this.cboUnidadeMedida.Location = new System.Drawing.Point(185, 276);
             this.cboUnidadeMedida.Name = "cboUnidadeMedida";
             this.cboUnidadeMedida.Size = new System.Drawing.Size(176, 21);
-            this.cboUnidadeMedida.TabIndex = 15;
+            this.cboUnidadeMedida.TabIndex = 8;
             // 
             // cboCategoria
             // 
@@ -262,7 +268,8 @@
             this.cboCategoria.Location = new System.Drawing.Point(10, 316);
             this.cboCategoria.Name = "cboCategoria";
             this.cboCategoria.Size = new System.Drawing.Size(169, 21);
-            this.cboCategoria.TabIndex = 16;
+            this.cboCategoria.TabIndex = 9;
+            this.cboCategoria.SelectedValueChanged += new System.EventHandler(this.cboCategoria_SelectedValueChanged);
             // 
             // cboSubCategoria
             // 
@@ -270,7 +277,7 @@
             this.cboSubCategoria.Location = new System.Drawing.Point(185, 316);
             this.cboSubCategoria.Name = "cboSubCategoria";
             this.cboSubCategoria.Size = new System.Drawing.Size(176, 21);
-            this.cboSubCategoria.TabIndex = 17;
+            this.cboSubCategoria.TabIndex = 10;
             // 
             // panel1
             // 
@@ -307,7 +314,7 @@
             this.btCarregaFoto.Location = new System.Drawing.Point(381, 241);
             this.btCarregaFoto.Name = "btCarregaFoto";
             this.btCarregaFoto.Size = new System.Drawing.Size(141, 72);
-            this.btCarregaFoto.TabIndex = 20;
+            this.btCarregaFoto.TabIndex = 11;
             this.btCarregaFoto.Text = "Carregar";
             this.btCarregaFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btCarregaFoto.UseVisualStyleBackColor = true;
@@ -319,7 +326,7 @@
             this.btLimpaFoto.Location = new System.Drawing.Point(545, 241);
             this.btLimpaFoto.Name = "btLimpaFoto";
             this.btLimpaFoto.Size = new System.Drawing.Size(140, 72);
-            this.btLimpaFoto.TabIndex = 21;
+            this.btLimpaFoto.TabIndex = 12;
             this.btLimpaFoto.Text = "Limpar";
             this.btLimpaFoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btLimpaFoto.UseVisualStyleBackColor = true;
