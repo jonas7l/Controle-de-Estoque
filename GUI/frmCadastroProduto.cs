@@ -154,11 +154,11 @@ namespace GUI
             {
                 e.Handled = true;
             }
-            if (e.KeyChar == ',' || e.KeyChar == ',')
+            if (e.KeyChar == ',' || e.KeyChar == '.')
             {
                 if (!txtValorVenda.Text.Contains("."))
                 {
-                    e.KeyChar = ',';
+                    e.KeyChar = '.';
                 }
                 else e.Handled = true;
             }
@@ -192,6 +192,14 @@ namespace GUI
                 {
                     txtValorVenda.Text += "00";
                 }
+            }
+            try 
+            {
+                Double d = Convert.ToDouble(txtValorVenda.Text);
+            }
+            catch 
+            {
+                txtValorVenda.Text += "0.00";
             }
         }
 
